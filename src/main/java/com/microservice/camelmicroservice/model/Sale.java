@@ -16,4 +16,18 @@ public class Sale {
     private String description;
     private String date_sale;
     private String name_employee;
+    
+    @Override
+    public String toString(){
+        return 
+                "{\"id_sale\": "+this.id_sale+", "+
+                "\"id_employee\": "+this.id_employee+", "+
+                "\"id_branch_office\": "+this.id_branch_office+", "+
+                "\"name_branch_office\": \""+this.name_branch_office+"\", "+
+                "\"total_sale\": "+this.total_sale+", "+
+                "\"description\": \""+this.description+"\", "+
+                "\"date_sale\": \""+this.date_sale+"\", "+
+                "\"name_employee\": \""+this.name_employee+"\"}";
+    }
+    
 }
