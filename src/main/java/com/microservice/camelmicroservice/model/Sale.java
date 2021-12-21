@@ -8,14 +8,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Sale {
+    
     private int id_sale;
     private int id_employee;
     private int id_branch_office;
-    private String name_branch_office;
     private double total_sale;
     private String description;
     private String date_sale;
     private String name_employee;
+    //Datos de la sucursal
+    private String name_branch_office;
+    private String state_branch_office;
+    private String city_branch_office;
+    private String street_branch_office;
+    private Integer number_branch_office;
+    private Integer zip_code_branch_office;
     
     @Override
     public String toString(){
@@ -27,7 +34,11 @@ public class Sale {
                 "\"total_sale\": "+this.total_sale+", "+
                 "\"description\": \""+this.description+"\", "+
                 "\"date_sale\": \""+this.date_sale+"\", "+
-                "\"name_employee\": \""+this.name_employee+"\"}";
+                "\"name_employee\": \""+this.name_employee+"\", "+
+                "\"state_branch_office\": \""+this.state_branch_office+"\", "+
+                "\"city_branch_office\": \""+this.city_branch_office+"\", "+
+                "\"street_branch_office\": \""+this.street_branch_office+"\", "+
+                "\"number_branch_office\": "+this.number_branch_office+", "+
+                "\"zip_code_branch_office\": "+this.zip_code_branch_office+"}";
     }
-    
 }
