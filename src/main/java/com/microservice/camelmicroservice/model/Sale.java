@@ -4,11 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Entity
+@Table
 public class Sale {
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_sale;
     private int id_employee;
     private int id_branch_office;
@@ -23,7 +28,9 @@ public class Sale {
     private String street_branch_office;
     private Integer number_branch_office;
     private Integer zip_code_branch_office;
-    
+    //folio generado en POS
+    private String folio;
+
     @Override
     public String toString(){
         return 
@@ -39,6 +46,7 @@ public class Sale {
                 "\"city_branch_office\": \""+this.city_branch_office+"\", "+
                 "\"street_branch_office\": \""+this.street_branch_office+"\", "+
                 "\"number_branch_office\": "+this.number_branch_office+", "+
-                "\"zip_code_branch_office\": "+this.zip_code_branch_office+"}";
+                "\"zip_code_branch_office\": "+this.zip_code_branch_office+", "+
+                    "\"folio\": \""+this.folio+"\" "+"}";
     }
 }
