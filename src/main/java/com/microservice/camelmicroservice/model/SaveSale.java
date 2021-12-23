@@ -10,8 +10,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Data
 @Entity
-@Table
-public class Sale {
+@Table(name = "save_sale")
+public class SaveSale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_sale;
